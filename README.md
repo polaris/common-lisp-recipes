@@ -47,3 +47,13 @@ buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, 
          --compress-core                                                                  \
          --output hello-world
 ```
+
+## Executing a shell command
+
+```
+(ql:quickload "inferior-shell")
+(inferior-shell:run "ls"
+			        :on-error nil
+			        :error-output :string
+			        :output :string)
+```
