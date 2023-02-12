@@ -1,3 +1,11 @@
+# Creating a project skeleton
+
+```
+* (ql:quickload "quickproject")
+* (quickproject:make-project #p"~/src/myproject/" :depends-on '(drakma cxml))
+* (asdf:load-system "myproject")
+```
+
 # Building self-contained executables
 
 ## SBCL
