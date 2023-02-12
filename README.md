@@ -57,3 +57,14 @@ buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, 
                     :error-output :string
                     :output :string)
 ```
+
+## Scheduling a job
+
+```
+(ql:quickload "clerk")
+(clerk:job "print hello" every 5.seconds (print "hello"))
+(clerk:start)
+...
+(clerk:stop)
+(clerk:empty-jobs-queue)
+```
