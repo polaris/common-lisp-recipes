@@ -1,4 +1,6 @@
-# Creating a project skeleton
+# Common Lisp Recipes
+
+## Creating a project skeleton
 
 ```
 * (ql:quickload "quickproject")
@@ -6,15 +8,15 @@
 * (asdf:load-system "myproject")
 ```
 
-# Building self-contained executables
+## Building self-contained executables
 
-## SBCL
+### SBCL
 
-### `SB-EXT:SAVE-LISP-AND-DIE`
+#### `SB-EXT:SAVE-LISP-AND-DIE`
 
 https://koji-kojiro.github.io/sb-docs/build/html/sb-ext/function/SAVE-LISP-AND-DIE.html
 
-#### Example
+##### Example
 ```
 sbcl --eval '(ql:quickload :myproject)'                                            \
      --eval "(sb-ext:save-lisp-and-die #p\"myproject\" :compression 9              \
@@ -22,13 +24,13 @@ sbcl --eval '(ql:quickload :myproject)'                                         
                                                        :executable t)"
 ```
 
-## buildapp
+### buildapp
 
 https://www.xach.com/lisp/buildapp/
 
-### Usage
+#### Usage
 
-#### Example 1
+##### Example 1
 ```
 buildapp --output myproject                            \
          --compress-core                               \
@@ -38,7 +40,7 @@ buildapp --output myproject                            \
          --entry main
 ```
 
-#### Example 2
+##### Example 2
 ```
 buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, world"))' \
          --entry main                                                                     \
