@@ -1,5 +1,7 @@
 # Common Lisp Recipes
 
+This repository contains a collection of Common Lisp recipes that I found helpful.
+
 ## Creating a project skeleton
 
 ```
