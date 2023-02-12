@@ -60,6 +60,10 @@ buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, 
 
 ## Scheduling a job
 
+### Clerk
+
+https://github.com/lisp-maintainers/clerk
+
 ```
 (ql:quickload "clerk")
 (clerk:job "print hello" every 5.seconds (print "hello"))
