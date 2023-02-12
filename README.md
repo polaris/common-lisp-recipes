@@ -53,7 +53,7 @@ buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, 
 ```
 (ql:quickload "inferior-shell")
 (inferior-shell:run "ls"
-			        :on-error nil
-			        :error-output :string
-			        :output :string)
+                    :on-error nil
+                    :error-output :string
+                    :output :string)
 ```
