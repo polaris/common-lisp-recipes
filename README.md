@@ -50,6 +50,10 @@ buildapp --eval '(defun main (argv) (declare (ignore argv)) (write-line "Hello, 
 
 ## Executing a shell command
 
+### `INFERIOR-SHELL`
+
+https://github.com/fare/inferior-shell
+
 ```
 (ql:quickload "inferior-shell")
 (inferior-shell:run "ls"
